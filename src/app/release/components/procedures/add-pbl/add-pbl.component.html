@@ -1,0 +1,89 @@
+<div class="row mt-3 w-100">
+  <div class="d-flex justify-content-center align-items-center pb-3">
+    <div class="w-50">
+      <div class="card card-body">
+        <div class="col-12">
+          <h5>Add PBL</h5>
+          <hr />
+        </div>
+        <div class="col-12 mt-1">
+          <div class="form-group">
+            <label class="pb-1"
+              >Release Type <span class="required">*</span></label
+            >
+            <select class="form-control" [(ngModel)]="addPBLData.release_type">
+              <option value="new_pbl">New PBL</option>
+              <option value="replace_pbl">
+                Replace PBL (Backward Compatible)
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Module Type <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder="--Select Module Type--"
+                [(ngModel)]="addPBLData.module_type"
+                (input)="filterOptions()"
+                [matAutocomplete]="module_type"
+                class="form-control"
+              />
+              <mat-autocomplete #module_type="matAutocomplete">
+                <mat-option
+                  *ngFor="let option of filteredOptionsModuleType"
+                  [value]="option"
+                  >{{ option }}</mat-option
+                >
+              </mat-autocomplete>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 mt-2"
+          *ngIf="addPBLData.release_type === 'replace_pbl'"
+        >
+          <div class="form-group">
+            <label class="pb-1"
+              >Current PBL <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder="Current PBL"
+                aria-label="Number"
+                [(ngModel)]="addPBLData.current_pbl"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1">New PBL <span class="required">*</span></label>
+            <div>
+              <input
+                type="text"
+                placeholder="New PBL"
+                aria-label="Number"
+                [(ngModel)]="addPBLData.new_pbl"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-2 text-end">
+          <button class="btn btn-sm app-btn-primary">Submit Part</button
+          >&nbsp;&nbsp;
+          <button class="btn btn-sm btn-danger" (click)="cancelSubmit()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

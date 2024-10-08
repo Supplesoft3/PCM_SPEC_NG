@@ -1,0 +1,62 @@
+<div class="row mt-3 w-100">
+  <div class="d-flex justify-content-center align-items-center pb-3">
+    <div class="w-50">
+      <div class="card card-body">
+        <div class="col-12">
+          <h5>Request New Main Micro Type</h5>
+          <hr />
+        </div>
+        <div class="col-12 mt-1">
+          <div class="form-group">
+            <label class="pb-1">Supplier <span class="required">*</span></label>
+            <select
+              class="form-control"
+              [(ngModel)]="addRequestMainMicroData.supplier"
+            >
+              <option value="select_supplier">Select Supplier</option>
+              <option value="pdx">Supplier</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-12 mt-1">
+          <div class="form-group">
+            <label class="pb-1"
+              >Module Type <span class="required">*</span></label
+            >
+            <select
+              class="form-control"
+              [(ngModel)]="addRequestMainMicroData.module_type"
+            >
+              <option value="Select_Module_type">Select Module Type</option>
+              <option value="pdx">PDX</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-12 mt-1">
+          <div class="form-group mt-2"></div>
+          <label class="pb-1"
+            >New Main Micro Type <span class="required">*</span></label
+          >
+          <div>
+            <input
+              type="text"
+              [(ngModel)]="addRequestMainMicroData.micro_type"
+              class="form-control"
+            />
+          </div>
+        </div>
+
+        <div class="col-12 mt-2 text-end">
+            <button class="btn btn-sm app-btn-primary">
+              Submit Request</button
+            >&nbsp;&nbsp;
+            <button class="btn btn-sm btn-danger" (click)="cancelSubmit()">
+              Cancel
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

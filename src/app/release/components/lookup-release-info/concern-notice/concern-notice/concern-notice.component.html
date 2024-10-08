@@ -1,0 +1,113 @@
+<div class="row m-1">
+  <div class="accordion px-0">
+    <div class="accordion-item border-bottom">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#concer-notice-filter"
+        >
+          Find Firmware
+        </button>
+      </h2>
+      <div id="concer-notice-filter" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-5 col-12 mt-2">
+                <div class="form-group">
+                  <label class="pb-1">WERS Concern</label>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      placeholder="WERS Concern"
+                      aria-label="Number"
+                      class="form-control"
+                      [(ngModel)]="findFrimWare.wersConcerns"
+                    />
+                    <span (click) = "onClickSearch()" class="input-group-text" id="basic-addon1"
+                      ><i class="fa fa-search"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-2 col-12 text-center mt-4 pt-3">
+                <p>OR</p>
+              </div>
+              <div class="col-md-5 col-12 mt-2">
+                <div class="form-group">
+                  <label class="pb-1">WERS Notice</label>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      placeholder="WERS Notice"
+                      aria-label="Number"
+                      class="form-control"
+                      [(ngModel)]="findFrimWare.wersNotice"
+                    />
+                    <span (click) = "onClickSearch()" class="input-group-text" id="basic-addon1"
+                      ><i class="fa fa-search"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card card-body mt-1">
+    <div class="data-unavailable" *ngIf = "!tempShowTable">
+        <p><span class="required">****</span>&nbsp;&nbsp;Please try to find firmware to view or export it.&nbsp;&nbsp;<span class="required">****</span></p>
+    </div>
+    <div *ngIf = "tempShowTable">
+      <div class="col-12">
+        <h5>
+          View / Export Firmware Report
+          <span class="sorted-by-notice-part-number"
+            >&nbsp;&nbsp;* Sorted by Notice then Part Number</span
+          >
+        </h5>
+        <hr />
+      </div>
+      <div class="col-12 note-label">
+        <label class="pb-1">Notes : </label>
+        <p>
+          Select the check box for each <strong>Part Number</strong> you want to
+          export and click on <strong>Export firmware</strong> button on the
+          bottom of the page
+        </p>
+      </div>
+      <div class="col-12">
+        <table class="table">
+          <thead>
+            <tr>
+              <th><input class="mt-1" type="checkbox" />&nbsp;&nbsp;Test</th>
+              <th>Test</th>
+              <th>Test</th>
+              <th>Test</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input class="mt-1" type="checkbox" />&nbsp;&nbsp;Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-12 text-end">
+        <button class="btn btn-sm btn-warning">
+          <i class="fa fa-file-excel-o" aria-hidden="true"></i> Export Excel</button
+        >&nbsp;
+        <button class="btn btn-sm btn-warning">
+          <i class="fa fa-code" aria-hidden="true"></i> Export XML
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

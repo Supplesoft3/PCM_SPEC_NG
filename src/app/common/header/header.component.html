@@ -1,0 +1,44 @@
+<div class="header shadow">
+  <div class="d-flex justify-content-between">
+    <div class="app-logo-div d-flex">
+      <img src="/assets/img/globe-image.png" alt="brand" />
+      <div class="pt-2 ps-2 text-center d-flex align-items-center">
+        <h3 class="navbar-brand logo-slogan" href="#">
+          Global Powertrain Control Systems Engineering
+        </h3>
+      </div>
+    </div>
+    <div class="pe-3">
+      <img src="/assets/img/Ford-logo.png" alt="brand" />
+    </div>
+  </div>
+  <div>
+    <div class="text-center w-100 d-flex justify-content-between navbar-header">
+      <div class="w-100">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav justify-content-center w-100">
+                <li class="nav-item" [routerLinkActive]="['link-active']">
+                  <a class="nav-link" [routerLink] = "urlMngr.getModuleUrl('RELEASE')">RELEASE</a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['link-active']">
+                  <a class="nav-link" [routerLink] = "urlMngr.getModuleUrl('CDS')">CDS</a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['link-active']">
+                  <a class="nav-link" [routerLink] = "urlMngr.getModuleUrl('MSP')">MSP</a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['link-active']">
+                  <a class="nav-link" [routerLink] = "urlMngr.getModuleUrl('HCR')">HCR</a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['link-active']">
+                  <a class="nav-link" [routerLink] = "urlMngr.getModuleUrl('DRR')">DRR</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

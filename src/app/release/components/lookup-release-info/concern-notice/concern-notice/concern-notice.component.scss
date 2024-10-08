@@ -1,0 +1,22 @@
+.sorted-by-notice-part-number{
+    font-size: 12px;
+}
+
+.note-label{
+    font-size: 11px;
+    label{
+        color: red;
+    }
+}
+
+.data-unavailable{
+    height: calc(100vh - 380px);
+    display: table;
+    text-align: center;
+    p{
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 14px;
+        font-weight: 700;
+    }
+}

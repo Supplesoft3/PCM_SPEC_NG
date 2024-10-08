@@ -1,0 +1,59 @@
+{
+  "sblData": [
+    {
+      "id": "497f",
+      "release_type": "new_sbl",
+      "supplier": "One",
+      "module_type": "Two",
+      "micro_type": "Three",
+      "description": "Test",
+      "lead_my_program": "Test",
+      "current_part_number": "",
+      "isDeleted": false
+    },
+    {
+      "id": "b716",
+      "release_type": "replace_sbl",
+      "supplier": "One",
+      "module_type": "Two",
+      "micro_type": "Three",
+      "description": "Test",
+      "lead_my_program": "Test",
+      "current_part_number": "23",
+      "isDeleted": false
+    },
+    {
+      "id": "5dbe",
+      "release_type": "replace_sbl",
+      "supplier": "",
+      "module_type": "Two",
+      "micro_type": "",
+      "description": "Test",
+      "lead_my_program": "",
+      "current_part_number": "34",
+      "isDeleted": false
+    },
+    {
+      "id": "dcf3",
+      "release_type": "new_sbl",
+      "supplier": "Two",
+      "module_type": "One",
+      "micro_type": "Two",
+      "description": "32",
+      "lead_my_program": "12",
+      "current_part_number": "",
+      "isDeleted": false
+    },
+    {
+      "id": "634b",
+      "release_type": "new_sbl",
+      "supplier": "Two",
+      "module_type": "One",
+      "micro_type": "Two",
+      "description": "23131",
+      "lead_my_program": "322",
+      "current_part_number": "",
+      "isDeleted": false
+    }
+  ]
+}

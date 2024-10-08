@@ -1,0 +1,149 @@
+<div class="row mt-3 w-100">
+  <div class="d-flex justify-content-center align-items-center pb-3">
+    <div class="w-50">
+      <div class="card card-body">
+        <div class="col-12">
+          <h5>Add Part-II or PDX</h5>
+          <hr />
+        </div>
+        <div class="col-12 mt-1">
+          <div class="form-group">
+            <label class="pb-1"
+              >Release Type <span class="required">*</span></label
+            >
+            <select
+              class="form-control"
+              [(ngModel)]="addPartIIData.release_type"
+            >
+              <option value="part_II">Part II</option>
+              <option value="pdx">
+                PDX
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Module Type <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder="--Select Module Type--"
+                [(ngModel)]="addPartIIData.module_type"
+                (input)="filterOptions('module_type')"
+                [matAutocomplete]="module_type"
+                class="form-control"
+              />
+              <mat-autocomplete #module_type="matAutocomplete">
+                <mat-option
+                  *ngFor="let option of filteredOptionsModuleType"
+                  [value]="option"
+                  >{{ option }}</mat-option
+                >
+              </mat-autocomplete>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-12 mt-2"
+        >
+          <div class="form-group">
+            <label class="pb-1"
+              >Micro Type <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder="--Select Micro Type--"
+                [(ngModel)]="addPartIIData.micro_type"
+                (input)="filterOptions('micro_type')"
+                [matAutocomplete]="micro_type"
+                class="form-control"
+              />
+              <mat-autocomplete #micro_type="matAutocomplete">
+                <mat-option
+                  *ngFor="let option of filteredOptionsMicroType"
+                  [value]="option"
+                  >{{ option }}</mat-option
+                >
+              </mat-autocomplete>
+            </div>
+          </div>
+          <div class="form-group mt-2">
+            <label class="pb-1"
+              >GGDS Version <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                aria-label="Number"
+                [(ngModel)]="addPartIIData.ggds_version"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="form-group mt-2">
+            <label class="pb-1"
+              >SWDL Version <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                aria-label="Number"
+                [(ngModel)]="addPartIIData.swdl_version"
+                class="form-control"
+              />
+            </div>
+          </div>
+
+          <div class="form-group mt-2">
+            <label class="pb-1"
+              >Part Number <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                aria-label="Number"
+                [(ngModel)]="addPartIIData.part_number"
+                class="form-control"
+              />Must start with DS for part-II and PX for PDX
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Description <span class="required">*</span></label
+            >
+            <textarea
+              class="form-control"
+              rows="4"
+              [(ngModel)]="addPartIIData.description"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1">Uploaded to V SEM? <span class="required">*</span></label>
+            <select class="form-control" [(ngModel)]="addPartIIData.v_sem">
+              <option value="part_II">Choose</option>
+            </select>You must upload the Part-II specification before you complete this form
+          </div>
+        </div>
+
+        <div class="col-12 mt-2 text-end">
+          <button class="btn btn-sm app-btn-primary">
+            Submit Part</button
+          >&nbsp;&nbsp;
+          <button class="btn btn-sm btn-danger" (click)="cancelSubmit()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

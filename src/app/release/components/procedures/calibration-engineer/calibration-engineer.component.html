@@ -1,0 +1,74 @@
+<div class="row">
+  <div class="col-12 mt-2">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link active"
+          id="edit-calibration-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#edit-calibration"
+          type="button"
+          role="tab"
+          aria-controls="edit-calibration"
+          aria-selected="true"
+        >
+          Edit Calibration
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="send-calibration-for-review-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#send-calibration-for-review"
+          type="button"
+          role="tab"
+          aria-controls="send-calibration-for-review"
+          aria-selected="false"
+        >
+          Send Calobration For Review
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button
+          class="nav-link"
+          id="reset-calibration-review-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#reset-calibration-review"
+          type="button"
+          role="tab"
+          aria-controls="reset-calibration-review"
+          aria-selected="false"
+        >
+          Reset Calibration Review
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div
+        class="tab-pane fade show active"
+        id="edit-calibration"
+        role="tabpanel"
+        aria-labelledby="edit-calibration-tab"
+      >
+        <app-edit-calibration></app-edit-calibration>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="send-calibration-for-review"
+        role="tabpanel"
+        aria-labelledby="send-calibration-for-review-tab"
+      >
+        <app-send-calibration-for-review></app-send-calibration-for-review>
+      </div>
+      <div
+        class="tab-pane fade"
+        id="reset-calibration-review"
+        role="tabpanel"
+        aria-labelledby="reset-calibration-review-tab"
+      >
+        <app-reset-calibration-review></app-reset-calibration-review>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,46 @@
+.header {
+  z-index: 999;
+  position: sticky;
+  top: 0;
+
+  .app-logo-div {
+    height: 60px;
+    object-fit: contain;
+    padding: 5px;
+    img {
+      height: 100%;
+      width: 80px;
+      border-radius: 10px;
+    }
+  }
+
+  .logo-slogan {
+    font-size: 18px;
+    color: var(--app-primary-color);
+    line-height: 12px;
+    font-weight: 700;
+  }
+
+  a {
+    display: block;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-decoration: none;
+    color: var(--app-white-color);
+    font-size: 14px;
+    font-weight: 600;
+    &:hover {
+      font-weight: 800;
+    }
+  }
+
+  .navbar-header{
+    background-color: var(--app-primary-color);
+  }
+
+  .link-active {
+    border-bottom: 5px solid var(--app-white-color);
+    border-radius: 3px;
+    font-weight: 800;
+  }
+}

@@ -1,0 +1,49 @@
+.sidebar {
+  background-color: var(--app-white-color);
+  padding: 20px;
+  min-height: calc(100vh - 167px);
+  max-height: calc(100vh - 167px);
+  height: calc(100vh - 167px);
+  width: 264px;
+  z-index: 997;
+}
+
+.menu-item {
+  height: calc(100vh - 200px);
+  overflow-y: scroll;
+  &::-webkit-scrollbar{
+    display: none;
+  }
+  button {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    color: var(--app-primary-color);
+    font-size: 14px;
+    font-weight: 600;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .menu-link-text {
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    a {
+      text-decoration: none;
+      color: var(--app-primary-color);
+    }
+    &:hover {
+      border-left: 5px solid var(--app-primary-color);
+      border-radius: 3px;
+    }
+  }
+}
+
+.link-active {
+  border-left: 5px solid var(--app-primary-color);
+  border-radius: 3px;
+}

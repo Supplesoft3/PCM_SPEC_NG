@@ -1,0 +1,119 @@
+<!-- <div class="row mt-3 w-100">
+    <div class="d-flex justify-content-center align-items-center pb-3">
+      <div class="w-50">
+        <div class="card card-body">
+          <div class="col-12">
+            <h5>Release Engineer Procedures</h5>
+            <hr />
+          </div>
+          <ul >
+            <li class="mb-3"><div class="a"><h6 class="lh-1">Edit Module Base Information</h6><span style="font-size: 11px;">(Edit Hardware Reference, Part Number Description, HCR Number, WERS Notice, Application, Peer Reviwer and Associated Firmware)</span></div></li>
+            <li class="mb-3"><div class="a"><h6 class="lh-1">Generate WERS D Screen</h6><span style="font-size: small;">(Generate WERS D Screen for a given concern)</span></div></li>
+            <li class="mb-3"><div class="a"><h6 class="lh-1">Reset Module Base Info</h6><span style="font-size: small;">(Move status from "Firmware Edit" to "Module Base Info Edit". Delete All Firmware. Clear Calibration Review signoffs.)</span></div></li>
+
+            <li class="mb-3"><div class="a"><h6 class="lh-1">Add Program to Released Part.</h6><span style="font-size: 11px;">(Add an additional program to a released part. Telegram is resent after the program is added to a part.)</span></div></li>
+
+          </ul>   
+      </div>
+    </div>
+  </div> -->
+<div class="row">
+  <div class="col-12 mt-2">
+    <div class="row">
+      <div class="col-12 mt-2">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="edit-module-base-information-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#edit-module-base-information"
+              type="button"
+              role="tab"
+              aria-controls="edit-module-base-information"
+              aria-selected="true"
+            >
+              Edit Module Base Information
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="generate-wers-d-screen-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#generate-wers-d-screen"
+              type="button"
+              role="tab"
+              aria-controls="generate-wers-d-screen"
+              aria-selected="false"
+            >
+            Generate WERS D Screen
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="reset-module-base-info-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reset-module-base-info"
+              type="button"
+              role="tab"
+              aria-controls="reset-module-base-info"
+              aria-selected="false"
+            >
+              Reset Module Base Info
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="add-program-to-released-part-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#add-program-to-released-part"
+              type="button"
+              role="tab"
+              aria-controls="add-program-to-released-part"
+              aria-selected="false"
+            >
+              Add Program to Released Part.
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="edit-module-base-information"
+            role="tabpanel"
+            aria-labelledby="edit-module-base-information-tab"
+          >
+            <app-edit-module-base-info></app-edit-module-base-info>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="generate-wers-d-screen"
+            role="tabpanel"
+            aria-labelledby="generate-wers-d-screen-tab"
+          >
+            <app-generate-wers-d-screen></app-generate-wers-d-screen>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="reset-module-base-info"
+            role="tabpanel"
+            aria-labelledby="reset-module-base-info-tab"
+          >
+            <app-reset-module-base-info></app-reset-module-base-info>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="add-program-to-released-part"
+            role="tabpanel"
+            aria-labelledby="add-program-to-released-part-tab"
+          >
+            <app-add-program-to-released-part></app-add-program-to-released-part>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

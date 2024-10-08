@@ -1,0 +1,30 @@
+<div class="sidebar">
+  <div class="menu-item">
+    <div class="accordion">
+      <div class="accordion-item border-bottom" *ngFor = "let menuItem of MENU_ITEMS">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+menuItem.id">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-2">
+                  <i [ngClass]="['fa', 'fa-' + menuItem.iconName]" aria-hidden="true"></i>
+                </div>
+                <div class="col-10">
+                  {{menuItem.name}}
+                </div>
+              </div>
+            </div>
+          </button>
+        </h2>
+        <div [attr.id]="menuItem.id" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            <div class="menu-link-text ps-4 pt-2 pb-2" [routerLinkActive]="['link-active']" *ngFor = "let menuLink of menuItem.children">
+              <!-- <button (click) = "navigateTo(menuLink.url)">{{menuLink.name}}</button> -->
+               <a class="ps-2" [routerLink] = "urlMngr.getUrl(menuLink.url)">{{menuLink.name}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
