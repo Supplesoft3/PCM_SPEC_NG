@@ -1,0 +1,342 @@
+<div class="row mt-3 w-100">
+  <div class="d-flex justify-content-center align-items-center pb-3">
+    <div class="w-50">
+      <div class="card card-body">
+        <div class="col-12">
+          <h5>Edit Part Number</h5>
+          <hr />
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Release Type <span class="required">*</span></label
+            >
+            <div>
+              <!-- <select
+                class="form-select"
+                multiple
+                (change)="onSelectChange($event)"
+                multiple
+                aria-label="Multiple select example"
+              >
+                <option selected>All</option>
+                <option value="1">AWDCH Assembly - Ford</option>
+                <option value="2">AWDCH Assembly - Supplier</option>
+                <option value="3">BCCM Assembly - Release</option>
+                <option value="4">BCCM Hardware</option>
+                <option value="5">BCCMB Assembly</option>
+                <option value="6">BCCMB Hardware</option>
+              </select> -->
+              <mat-select multiple>
+                <mat-option selected>All</mat-option>
+                <mat-option value="1">AWDCH Assembly - Ford</mat-option>
+                <mat-option value="2">AWDCH Assembly - Supplier</mat-option>
+                <mat-option value="3">BCCM Assembly - Release</mat-option>
+                <mat-option value="4">BCCM Hardware</mat-option>
+                <mat-option value="5">BCCMB Assembly</mat-option>
+                <mat-option value="6">BCCMB Hardware</mat-option>
+              </mat-select>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-1">
+          <div class="form-group">
+            <label class="pb-1"
+              >Release Usage <span class="required">*</span></label
+            >
+            <select
+              class="form-control"
+              [(ngModel)]="findPartNumberData.release_usage"
+            >
+              <option value="All">All</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Assembly P/N <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findPartNumberData.assembly_pn"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Hardware P/N <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findPartNumberData.hardware_pn"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Software P/N <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findPartNumberData.software_pn"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Software P/N <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findPartNumberData.software_pn"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Application Enginner <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findPartNumberData.application_engineer"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Catch Word <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findPartNumberData.catch_word"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Calibration Number <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findPartNumberData.calibration_number"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >SW Main Strategy <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findPartNumberData.sw_main_strategy"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Concern Number <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findPartNumberData.concern_number"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Concern Number <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findPartNumberData.concern_number"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >P/N Status <span class="required">*</span></label
+            >
+            <div>
+              <mat-radio-button value="1">Released</mat-radio-button>
+              <mat-radio-button value="2">In Process</mat-radio-button>
+              <mat-radio-button value="2">All</mat-radio-button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Date Created <span class="required">*</span></label
+            >
+            <div>
+              <label for="fromDate"> From :&nbsp;</label>
+              <input type="date" name="date" />
+              <label for="toDate"> &nbsp; To :&nbsp;</label>
+              <input type="date" name="date" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+            <div class="form-group">
+              <label class="pb-1"
+                >Date Released <span class="required">*</span></label
+              >
+              <div>
+                <label for="fromDate">From :&nbsp;</label>
+                <input type="date" name="date" />
+                <label for="toDate">&nbsp; To :&nbsp;</label>
+                <input type="date" name="date" />
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="col-12 mt-4 text-center d-flex justify-content-between">
+            <button type="button" class="btn btn-outline-primary">
+              Search
+            </button>
+            <button type="button" class="btn btn-outline-primary">
+              Release Home Page
+            </button>
+          </div>
+
+        <!-- <div class="col-12 mt-1">
+          <div class="form-group">
+            <label class="pb-1"
+              >Release Type <span class="required">*</span></label
+            >
+            <select class="form-control" [(ngModel)]="addPBLData.release_type">
+              <option value="all_part_number">All</option>
+              <option value="ford_part_number">AWDCH Assembly - Ford</option>
+              <option value="supplier_part_number">
+                AWDCH Assembly - Supplier
+              </option>
+              <option value="hardware_part_number">AWDCH Hardware</option>
+              <option value="bccm_release_part_number">
+                BCCM Assembly - Release
+              </option>
+              <option value="bccm_hardware_part_number">BCCM Hardware</option>
+              <option value="bccmb_assembly_part_number">BCCMB Assembly</option>
+              <option value="bccmb_hardware_part_number">BCCMB Hardware</option>
+            </select>
+          </div>
+        </div>
+
+        <div
+          class="col-12 mt-2"
+          *ngIf="addPBLData.release_type === 'replace_pbl'"
+        >
+          <div class="form-group">
+            <label class="pb-1"
+              >Current PBL <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder="Current PBL"
+                aria-label="Number"
+                [(ngModel)]="addPBLData.current_pbl"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1">New PBL <span class="required">*</span></label>
+            <div>
+              <input
+                type="text"
+                placeholder="New PBL"
+                aria-label="Number"
+                [(ngModel)]="addPBLData.new_pbl"
+                class="form-control"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-12 mt-2 text-end">
+          <button class="btn btn-sm app-btn-primary">Submit Part</button
+          >&nbsp;&nbsp;
+          <button class="btn btn-sm btn-danger" (click)="cancelSubmit()">
+            Cancel
+          </button>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

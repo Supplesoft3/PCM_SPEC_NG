@@ -50,7 +50,7 @@ export class ReleaseSidebarComponent {
       iconName: 'eye',
       children: [
         {
-          id: 'concem_notice',
+          id: 'concern_notice',
           name: 'Concern / Notice',
           url: 'CONCERN_NOTICE',
         },

@@ -1,0 +1,166 @@
+<div class="row mt-3 w-100">
+  <div class="d-flex justify-content-center align-items-center pb-3">
+    <div class="w-75">
+      <div class="card card-body">
+        <div class="col-12">
+          <h5>Find Production Part Number</h5>
+          <hr />
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Part Number <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findProductionPartNumberData.part_number1"
+                class=""
+              />-<input
+                type="text"
+                placeholder="12A650"
+                aria-label="Number"
+                [(ngModel)]="findProductionPartNumberData.part_number2"
+                class=""
+              />-<input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findProductionPartNumberData.part_number3"
+                class=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >WERS Notice <span class="required">*</span></label
+            >
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                [(ngModel)]="findProductionPartNumberData.WERS_notice"
+              />
+              <span class="input-group-text" id="basic-addon2"
+                >example: "APED E 11696390 003"</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Catch Word <span class="required">*</span></label
+            >
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                [(ngModel)]="findProductionPartNumberData.catch_word"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Software Part Number <span class="required">*</span></label
+            >
+            <div>
+              <input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findProductionPartNumberData.software_part_number1"
+                class=""
+              />-<input
+                type="text"
+                placeholder="14C204"
+                aria-label="Number"
+                [(ngModel)]="findProductionPartNumberData.software_part_number2"
+                class=""
+              />-<input
+                type="text"
+                placeholder=""
+                aria-label="Number"
+                [(ngModel)]="findProductionPartNumberData.software_part_number3"
+                class=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Calibration Number <span class="required">*</span></label
+            >
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                [(ngModel)]="findProductionPartNumberData.calibration_number"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+          <div class="form-group">
+            <label class="pb-1"
+              >Input File (Main Strategy) <span class="required">*</span></label
+            >
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+                [(ngModel)]="findProductionPartNumberData.main_strategy"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 mt-2">
+            <div class="form-group">
+              <label class="pb-1"
+                >Chip ID <span class="required">*</span></label
+              >
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Recipient's username"
+                  aria-describedby="basic-addon2"
+                  [(ngModel)]="findProductionPartNumberData.chip_id"
+                />
+              </div>
+            </div>
+          </div>
+        <div class="col-12 mt-4 text-center d-flex justify-content-between">
+          <button type="button" class="btn btn-primary">
+            Search
+          </button>
+          <button type="button" class="btn btn-danger">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

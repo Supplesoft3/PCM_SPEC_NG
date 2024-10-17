@@ -14,6 +14,12 @@
   &::-webkit-scrollbar{
     display: none;
   }
+  .accordion {
+    border: none;
+    .accordion-item {
+      border: none;
+    }
+  }
   button {
     width: 100%;
     text-align: left;

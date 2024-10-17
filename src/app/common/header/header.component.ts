@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UrlManager } from '../../utils/shared-constants.model';
 import { Router, RouterModule } from '@angular/router';
 
@@ -9,10 +9,15 @@ import { Router, RouterModule } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   urlMngr: UrlManager;
   constructor(private router: Router) {
     this.urlMngr = new UrlManager();
+  }
+
+  ngOnInit(){
+    console.log("router : ", this.router);
+    console.log("this.router.navigate : ", this.router.navigate)
   }
 
   navigateTo(url: string) {

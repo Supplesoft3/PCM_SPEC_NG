@@ -1,0 +1,137 @@
+<div class="container mt-5 mb-5 part-number">
+    <div class="card">
+        <div class="card-header">
+            <h3>Find Part Number</h3>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="row mb-3">
+                    <label for="releaseType" class="col-sm-2 col-form-label">Release Type:</label>
+                    <div class="col-sm-10">
+                        <select id="releaseType" class="form-select">
+                            <option>All</option>
+                            <option>AWDCH Assembly - Ford</option>
+                            <option>AWDCH Assembly - Supplier</option>
+                            <option>AWDCH Hardware</option>
+                            <option>BCCM Assembly Release</option>
+                            <option>BCCM Hardware</option>
+                            <option>BCCMB Assembly</option>
+                            <option>BCCMB Hardware</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="releaseUsage" class="col-sm-2 col-form-label">Release Usage:</label>
+                    <div class="col-sm-10">
+                        <select id="releaseUsage" class="form-select">
+                            <option>All</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3 all-inputs">
+                    <div>
+                        <label for="assemblyPN" class="col col-form-label">Assembly P/N:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="assemblyPN">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="hardwarePN" class="col col-form-label">Hardware P/N:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="hardwarePN">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="softwarePN" class="col col-form-label">Software P/N:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="assemblyPN">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="applicationEngineer" class="col col-form-label">Application Engineer:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="applicationEngineer">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="catchWrd" class="col col-form-label">Catch Word:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="catchWrd">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="calibrationNumber" class="col col-form-label">Calibration Number:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="calibrationNumber">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="SWmain" class="col col-form-label">SW Main Strategy:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="SWmain">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="concernNumber" class="col col-form-label">Concern Number:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="concernNumber">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label">P/N Status:</label>
+                    <div class="col-sm-10 d-flex">
+                        <div class="form-check form-check-inline d-flex align-items-center gap-2">
+                            <input class="form-check-input" type="radio" name="pnStatus" id="released" value="released">
+                            <label class="form-check-label" for="released">Released</label>
+                        </div>
+                        <div class="form-check form-check-inline d-flex align-items-center gap-2">
+                            <input class="form-check-input" type="radio" name="pnStatus" id="inProcess" value="inProcess">
+                            <label class="form-check-label" for="inProcess">In Process</label>
+                        </div>
+                        <div class="form-check form-check-inline d-flex align-items-center gap-2">
+                            <input class="form-check-input" type="radio" name="pnStatus" id="all" value="all" checked>
+                            <label class="form-check-label" for="all">All</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="dateCreated" class="col-sm-2 col-form-label">Date Created:</label>
+                    <div class="col-sm-5 d-flex align-items-center">
+                        <label for="dateCreated" class="col-sm-2 col-form-label">From:</label>
+                        <input type="date" class="form-control" id="dateCreatedFrom" placeholder="From">
+                    </div>
+                    <div class="col-sm-5 d-flex align-items-center">
+                        <label for="dateCreated" class="col-sm-2 col-form-label">To:</label>
+                        <input type="date" class="form-control" id="dateCreatedTo" placeholder="To">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="dateRelease" class="col-sm-2 col-form-label">Date Release:</label>
+                    <div class="col-sm-5 d-flex align-items-center">
+                        <label for="dateReleased" class="col-sm-2 col-form-label">From:</label>
+                        <input type="date" class="form-control" id="dateReleasedFrom" placeholder="From">
+                    </div>
+                    <div class="col-sm-5 d-flex align-items-center">
+                        <label for="dateReleased" class="col-sm-2 col-form-label">To:</label>
+                        <input type="date" class="form-control" id="dateReleasedTo" placeholder="To">
+                    </div>
+                </div>
+                <div class="row mb-3 text-end">
+                    <div class="col-sm-10 offset-sm-2 d-flex gap-3 justify-content-end">
+                        <button type="submit" class="btn btn-primary ">Search</button>
+                        <button type="reset" class="btn btn-primary">Release Homepage</button>
+                    </div>
+                </div>
+            </form>
+            <p class="mt-4" style="font-size: 13px;">Instructions:<br>
+                Fill out any criteria you wish to search on. Use a "" as a wildcard. Example: If you want to search for all concern numbers starting with "123" then type "*123"<br/>
+                If you want to find concern number *123* then type *123* <br/>
+                If you want to find all concern numbers with an unknown second character then type *123*
+            </p>
+        </div>
+    </div>
+</div>

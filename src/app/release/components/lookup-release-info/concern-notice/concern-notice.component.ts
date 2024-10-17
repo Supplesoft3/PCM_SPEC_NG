@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {
   FindFirmWare,
   FirmWareReport,
-} from '../../../../utils/models/concern-notice.model';
+} from '../../../utils/models/concern-notice.model';
 
 @Component({
   selector: 'app-concern-notice',

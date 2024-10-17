@@ -1,0 +1,57 @@
+<div class="row">
+  <div class="col-12 mt-2">
+    <div class="row">
+      <div class="col-12 mt-2">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="edit-part-number-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#edit-part-number"
+              type="button"
+              role="tab"
+              aria-controls="edit-part-number"
+              aria-selected="true"
+            >
+              Edit Part Number
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="firmware-data-for-prism-input-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#firmware-data-for-prism-input"
+              type="button"
+              role="tab"
+              aria-controls="firmware-data-for-prism-input"
+              aria-selected="false"
+            >
+              Firmware Data for Prism Input
+            </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+          <div
+            class="tab-pane fade show active"
+            id="edit-part-number"
+            role="tabpanel"
+            aria-labelledby="edit-part-number-tab"
+          >
+            <app-edit-part-number></app-edit-part-number>
+          </div>
+          
+          <div
+            class="tab-pane fade"
+            id="firmware-data-for-prism-input"
+            role="tabpanel"
+            aria-labelledby="firmware-data-for-prism-input-tab"
+          >
+            <app-firmware-data-for-prism-input></app-firmware-data-for-prism-input>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

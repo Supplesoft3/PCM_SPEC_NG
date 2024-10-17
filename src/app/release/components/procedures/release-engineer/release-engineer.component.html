@@ -64,6 +64,21 @@
               Reset Module Base Info
             </button>
           </li>
+
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="reset-soft-lock-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#reset-soft-lock"
+              type="button"
+              role="tab"
+              aria-controls="reset-soft-lock"
+              aria-selected="false"
+            >
+              Reset Soft Lock
+            </button>
+          </li>
           <li class="nav-item" role="presentation">
             <button
               class="nav-link"
@@ -103,6 +118,14 @@
             aria-labelledby="reset-module-base-info-tab"
           >
             <app-reset-module-base-info></app-reset-module-base-info>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="reset-soft-lock"
+            role="tabpanel"
+            aria-labelledby="reset-soft-lock-tab"
+          >
+            <app-reset-soft-lock></app-reset-soft-lock>
           </div>
           <div
             class="tab-pane fade"

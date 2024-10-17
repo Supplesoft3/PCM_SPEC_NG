@@ -1,0 +1,119 @@
+<div class="row">
+    <div class="col-12 mt-2">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="release-status-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#release-status"
+            type="button"
+            role="tab"
+            aria-controls="release-status"
+            aria-selected="true"
+          >
+            Release Status
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="program-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#program"
+            type="button"
+            role="tab"
+            aria-controls="program"
+            aria-selected="false"
+          >
+            Program
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="concern-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#concern-notice"
+            type="button"
+            role="tab"
+            aria-controls="concern-notice"
+            aria-selected="false"
+          >
+            Concern/Notice
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="part-number-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#part-number"
+            type="button"
+            role="tab"
+            aria-controls="part-number"
+            aria-selected="false"
+          >
+            Part Number/Catchword/Date Range
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="release-request-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#release-request"
+            type="button"
+            role="tab"
+            aria-controls="release-request"
+            aria-selected="false"
+          >
+            Release Request
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div
+          class="tab-pane fade show active"
+          id="release-status"
+          role="tabpanel"
+          aria-labelledby="release-status-tab"
+        >
+          This is for the Release Status tab.
+        </div>
+        <div
+          class="tab-pane fade"
+          id="program"
+          role="tabpanel"
+          aria-labelledby="program-tab"
+        >
+          <app-program></app-program>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="concern-notice"
+          role="tabpanel"
+          aria-labelledby="concern-tab"
+        >
+          <app-concern-notice></app-concern-notice>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="part-number"
+          role="tabpanel"
+          aria-labelledby="part-number-tab"
+        >
+         <app-part-number></app-part-number>
+        </div>
+        <div
+          class="tab-pane fade"
+          id="release-request"
+          role="tabpanel"
+          aria-labelledby="release-request-tab"
+        >
+          Content for Release Request.
+        </div>
+      </div>
+    </div>
+  </div>
+  
